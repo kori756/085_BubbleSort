@@ -26,7 +26,7 @@ void input()
 
     for (int i = 0; i < n; i++)                     // looping dengan i dimulai dari 0 hingga n-1
     {
-        cout << "Data ke-"  << (1 + 1) << ": ";     // output ke layar
+        cout << "Data ke-"  << (i + 1) << ": ";     // output ke layar
         cin >> arr[i];                              // input dri pengguna
     }
 }
@@ -56,4 +56,37 @@ void bubbleSortArray()
       cout << endl;
     
     } while (pass <= n - 1); //step 5
+}
+
+void display()
+{
+    cout << endl;
+    cout << "===================================" << endl;
+    cout << "Element Array yang telah tersususn" << endl;
+    cout << "===================================" << endl;
+    cout << endl;
+    for (int j = 0; j < n; j++)
+    {
+        cout << arr [j]; //menampilkan array
+        if (j < n - 1)
+        {
+            cout << " --> ";
+        }
+    }
+    cout << endl;
+    cout << endl;
+
+    cout << "jumlah pass = " << n - 1 << endl; //menampilkan jumlah dari pass
+}
+
+int main()
+{
+
+    input();
+
+    bubbleSortArray();
+    display();
+
+    system("pause");
+    return 0;
 }
